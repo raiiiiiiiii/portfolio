@@ -1,0 +1,19 @@
+{
+  "name": "anaya-portfolio",
+  "version": "1.0.0",
+  "description": "Ultra premium personal portfolio website for Anya - Web3 Digital Artist, Content Creator, and Builder",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "node serve.js",
+    "build": "echo Build complete"
+  },
+  "keywords": [
+    "portfolio",
+    "web3",
+    "artist",
+    "builder"
+  ],
+  "author": "Anya",
+  "license": "MIT"
+}

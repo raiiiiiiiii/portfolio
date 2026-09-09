@@ -1,0 +1,4 @@
+node*modules
+.system*
+*.log
+Thumbs.db
