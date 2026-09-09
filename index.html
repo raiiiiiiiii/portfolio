@@ -1800,6 +1800,130 @@
       letter-spacing: 0.5px;
     }
 
+    /* SECTION: ACHIEVEMENTS */
+    .achievements-section {
+      background-color: var(--bg-2);
+      position: relative;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .achievement-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(244, 114, 182, 0.06);
+      transition: all 0.28s var(--ease-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .achievement-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(244, 114, 182, 0.16);
+      border-color: var(--pink);
+    }
+
+    .achievement-card:hover::before {
+      opacity: 1;
+    }
+
+    .achievement-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .achievement-icon-wrapper {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(244, 114, 182, 0.2);
+      flex-shrink: 0;
+      color: var(--white);
+    }
+
+    .achievement-tag {
+      font-family: var(--font-nav);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(244, 114, 182, 0.1);
+      color: var(--pink-deep);
+      border: 1px solid var(--border);
+    }
+
+    .achievement-title {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 0 0 10px 0;
+      line-height: 1.35;
+    }
+
+    .achievement-desc {
+      font-size: 14px;
+      color: var(--gray-dark);
+      line-height: 1.65;
+      margin: 0 0 22px 0;
+    }
+
+    .achievement-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid rgba(244, 114, 182, 0.15);
+      margin-top: auto;
+    }
+
+    .achievement-date {
+      font-family: var(--font-nav);
+      font-size: 12px;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .achievement-highlight-pill {
+      font-family: var(--font-nav);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--pink-deep);
+      background: var(--gradient-soft);
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
     /* SECTION 6: CONTACT */
     .contact-section {
       background-color: var(--bg);
@@ -2048,6 +2172,7 @@
         <a href="#about" class="nav-link interactive">ABOUT</a>
         <a href="#services" class="nav-link interactive">WHAT I DO</a>
         <a href="#projects" class="nav-link interactive">WORK</a>
+        <a href="#achievements" class="nav-link interactive">ACHIEVEMENTS</a>
         <a href="#contact" class="nav-link interactive">CONTACT</a>
       </nav>
 
@@ -2067,6 +2192,7 @@
       <a href="#about" class="mobile-link">ABOUT <span>&rarr;</span></a>
       <a href="#services" class="mobile-link">WHAT I DO <span>&rarr;</span></a>
       <a href="#projects" class="mobile-link">WORK <span>&rarr;</span></a>
+      <a href="#achievements" class="mobile-link">ACHIEVEMENTS <span>&rarr;</span></a>
       <a href="#contact" class="mobile-link">CONTACT <span>&rarr;</span></a>
       <div class="mobile-drawer-cta">
         <a href="#contact" class="nav-btn interactive">WORK WITH ME</a>
@@ -5729,6 +5855,90 @@
         
     </section>
 
+    <!-- SECTION 5: ACHIEVEMENTS -->
+    <section class="achievements-section section-padded" id="achievements">
+      <div class="section-wrapper">
+        <div class="section-label-box">
+          <span class="section-label">MILESTONES & RECOGNITION</span>
+        </div>
+
+        <h2 class="section-heading reveal-item">Key Achievements.</h2>
+        <p class="reveal-item" style="max-width: 620px; margin-bottom: 36px; color: var(--gray-dark); font-size: 15.5px; line-height: 1.7;">
+          Track record of builder milestones, ambassador appointments, community milestones, and Web3 ecosystem contributions.
+        </p>
+
+        <div class="achievements-grid">
+          <!-- Achievement Card 1 -->
+          <div class="achievement-card interactive reveal-item">
+            <div>
+              <div class="achievement-top">
+                <div class="achievement-icon-wrapper badge-arc">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                  </svg>
+                </div>
+                <span class="achievement-tag">Builder</span>
+              </div>
+              <h3 class="achievement-title">Shipped ArcSwap Protocol</h3>
+              <p class="achievement-desc">
+                Solo-developed and successfully deployed ArcSwap, a USDC ↔ EURC stablecoin swap tool live on Arc Network Testnet, driving early cross-currency DeFi testing.
+              </p>
+            </div>
+            <div class="achievement-footer">
+              <span class="achievement-date">Arc Testnet</span>
+              <span class="achievement-highlight-pill">Live DApp</span>
+            </div>
+          </div>
+
+          <!-- Achievement Card 2 -->
+          <div class="achievement-card interactive reveal-item">
+            <div>
+              <div class="achievement-top">
+                <div class="achievement-icon-wrapper badge-unitas">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"/>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                  </svg>
+                </div>
+                <span class="achievement-tag">Ambassador</span>
+              </div>
+              <h3 class="achievement-title">Unitas Labs & moove.xyz Ambassador</h3>
+              <p class="achievement-desc">
+                Selected as official ambassador representing Unitas Labs (Yield Generation Layer) and moove.xyz, driving ecosystem advocacy, content, and community awareness.
+              </p>
+            </div>
+            <div class="achievement-footer">
+              <span class="achievement-date">Official Role</span>
+              <span class="achievement-highlight-pill">Ecosystem Lead</span>
+            </div>
+          </div>
+
+          <!-- Achievement Card 3 -->
+          <div class="achievement-card interactive reveal-item">
+            <div>
+              <div class="achievement-top">
+                <div class="achievement-icon-wrapper badge-inj">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </div>
+                <span class="achievement-tag">Community</span>
+              </div>
+              <h3 class="achievement-title">2,289+ Builders & 53 Curated Posts</h3>
+              <p class="achievement-desc">
+                Scaled a dedicated Web3 audience across Injective, Binance, PrismaX, and Circlexio with viral threads, community challenges, and high-engagement content ops.
+              </p>
+            </div>
+            <div class="achievement-footer">
+              <span class="achievement-date">Nov 2025 - Present</span>
+              <span class="achievement-highlight-pill">2.2K+ Followers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION 6: CONTACT -->
     <section class="contact-section section-padded" id="contact">
       <div class="section-wrapper">
@@ -5795,6 +6005,7 @@
           <a href="#about" class="footer-link interactive">ABOUT</a>
           <a href="#services" class="footer-link interactive">WHAT I DO</a>
           <a href="#projects" class="footer-link interactive">WORK</a>
+          <a href="#achievements" class="footer-link interactive">ACHIEVEMENTS</a>
           <a href="#contact" class="footer-link interactive">CONTACT</a>
         </div>
       </div>
@@ -6032,7 +6243,7 @@
 
         revealItems.forEach(function (item, idx) {
           // Stagger delays for grid items
-          const parentGrid = item.closest('.services-grid, .fact-cards-grid, .contact-cards-grid');
+          const parentGrid = item.closest('.services-grid, .fact-cards-grid, .achievements-grid, .contact-cards-grid');
           if (parentGrid) {
             const siblings = Array.from(parentGrid.children);
             const itemPos = siblings.indexOf(item);
