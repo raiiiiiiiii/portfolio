@@ -5,8 +5,7 @@
   "main": "serve.js",
   "scripts": {
     "start": "node serve.js",
-    "dev": "node serve.js",
-    "build": "echo Build complete"
+    "dev": "node serve.js"
   },
   "keywords": [
     "portfolio",
