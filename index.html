@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anya | Web3 Digital Artist, Content Creator & Builder</title>
-  <meta name="description" content="Portfolio of Anya: Web3 Digital Artist, Content Creator, and Builder. Ambassador at Unitas Labs & moove.xyz. Creator of ArcSwap on Arc Network.">
+  <title>Anya | Web3 Content Creator &amp; Builder</title>
+  <meta name="description" content="Anya — Web3 Content Creator &amp; Builder. Creator of ArcSwap on Arc Network. Ambassador at Moove, Unitas Labs &amp; Duel Duck.">
   
   <!-- Curated Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1800,7 +1800,254 @@
       letter-spacing: 0.5px;
     }
 
+    /* Project Case Study Layout */
+    .project-case-study {
+      padding: 24px 0 8px;
+    }
+
+    .project-case-tagline {
+      font-size: 15px;
+      color: var(--text-secondary, #b0b0c0);
+      margin-bottom: 22px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .project-case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .project-case-grid { grid-template-columns: 1fr; }
+    }
+
+    .project-case-label {
+      font-family: var(--font-nav);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      margin-bottom: 8px;
+    }
+
+    .project-case-text {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    .project-tech-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .project-tech-list li {
+      font-size: 13px;
+      color: var(--gray);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .project-tech-list li::before {
+      content: '▸';
+      color: var(--pink-deep);
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
+    .project-case-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    /* Status Badges */
+    .project-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-family: var(--font-nav);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .badge-live {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10B981;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .badge-ambassador {
+      background: rgba(139, 92, 246, 0.15);
+      color: #A78BFA;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+    }
+
+    .badge-base {
+      background: linear-gradient(135deg, #1652F0, #0A2BDA);
+      color: #fff;
+    }
+
+    .clean-project-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* SECTION: BUILDS */
+    .builds-section {
+      background: var(--bg);
+      position: relative;
+    }
+
+    .builds-subtext {
+      font-size: 15px;
+      color: var(--gray);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 44px;
+    }
+
+    .builds-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .build-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s var(--ease-smooth), border-color 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .build-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(236,72,153,0.04) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .build-card:hover::before { opacity: 1; }
+
+    .build-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(236,72,153,0.15);
+      border-color: rgba(236,72,153,0.35);
+    }
+
+    .build-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .build-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-nav);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .build-live-badge {
+      font-family: var(--font-nav);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #10B981;
+      background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+
+    .build-title {
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+      margin: 0;
+    }
+
+    .build-desc {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .build-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .build-tag {
+      font-family: var(--font-nav);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 3px 8px;
+    }
+
+    .build-cta {
+      font-family: var(--font-nav);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      margin-top: 4px;
+      transition: letter-spacing 0.2s;
+    }
+
+    .build-card:hover .build-cta {
+      letter-spacing: 1.4px;
+    }
+
     /* SECTION: ACHIEVEMENTS */
+
     .achievements-section {
       background-color: var(--bg-2);
       position: relative;
@@ -2177,7 +2424,7 @@
       </nav>
 
       <div class="nav-btn-wrapper">
-        <a href="#contact" class="nav-btn interactive">WORK WITH ME</a>
+        <a href="mailto:anayahacker79@gmail.com" class="nav-btn interactive">CONTACT ME</a>
       </div>
 
       <button class="mobile-menu-toggle interactive" id="mobileMenuBtn" aria-label="Toggle navigation menu">
@@ -2216,7 +2463,7 @@
           <div class="hero-left-col reveal-item">
             <div class="hero-badge">
               <span class="hero-pulse-dot"></span>
-              <span class="hero-badge-text">DIGITAL ARTIST AND WEB3 BUILDER</span>
+              <span class="hero-badge-text">WEB3 CONTENT CREATOR &amp; BUILDER</span>
             </div>
 
             <h1 class="hero-title">
@@ -2229,12 +2476,12 @@
             </div>
 
             <p class="hero-bio">
-              Digital artist, content creator, and Web3 builder. Ambassador at Unitas Labs and moove.xyz. Currently building on Arc Network. I do not wait for mainnet to start building.
+              Web3 Content Creator &amp; Builder. Creator of ArcSwap on Arc Network. Ambassador at Moove, Unitas Labs &amp; Duel Duck.
             </p>
 
             <div class="hero-cta-group">
               <a href="#projects" class="btn-primary interactive">See My Work</a>
-              <a href="#services" class="btn-secondary interactive">View My Art</a>
+              <a href="#builds" class="btn-secondary interactive">What I Build</a>
             </div>
 
             <div class="hero-stats-row">
@@ -2243,7 +2490,7 @@
                 <span class="hero-stat-divider"></span>
               </div>
               <div class="hero-stat-item">
-                <span>2,289 Followers</span>
+                                <span id="followers-count">2K+ Followers</span>
                 <span class="hero-stat-divider"></span>
               </div>
               <div class="hero-stat-item">
@@ -2272,10 +2519,10 @@
                 <span class="frame-corner frame-corner-br"></span>
 
                 <!-- Anya PFP Avatar -->
-                <img src="anya-pfp.jpg" alt="Anya - Web3 Digital Artist and Builder" class="pfp-image">
+                <img src="anya-pfp.jpg" alt="Anya - Web3 Content Creator &amp; Builder" class="pfp-image">
 
                 <!-- Frame Bottom Label -->
-                <div class="art-frame-label">DIGITAL ARTIST</div>
+                <div class="art-frame-label">WEB3 BUILDER</div>
               </div>
 
               <!-- Floating Stat Card 2 -->
@@ -2300,12 +2547,12 @@
           <span class="section-label-underline" id="aboutUnderline"></span>
         </div>
 
-        <h2 class="section-heading reveal-item">Artist. Builder. Creator.</h2>
+        <h2 class="section-heading reveal-item">Builder. Creator. Ambassador.</h2>
 
         <div class="about-grid">
           <div class="about-left-col reveal-item">
             <p class="about-bio-text">
-              I joined Web3 in November 2025 and immediately started building. While most people are still reading about new chains, I am already shipping tools on them. I built ArcSwap, a USDC to EURC swap tool on Arc Testnet, because I do not wait for permission. I create digital art, produce Web3 content, and represent Unitas Labs and moove.xyz. Musical and ambitious.
+              I joined Web3 in November 2025 and immediately started building. While most people are still reading about new chains, I am already shipping tools on them. I am the creator of ArcSwap on Arc Network, building onchain protocols and high-impact Web3 content. Official Ambassador at Moove, Unitas Labs, and Duel Duck.
             </p>
           </div>
 
@@ -2316,11 +2563,11 @@
             </div>
             <div class="fact-card interactive reveal-item">
               <div class="fact-label">Built</div>
-              <div class="fact-val">ArcSwap on Arc Testnet</div>
+              <div class="fact-val">ArcSwap on Arc Network</div>
             </div>
             <div class="fact-card interactive reveal-item">
               <div class="fact-label">Represents</div>
-              <div class="fact-val">Unitas Labs and moove.xyz</div>
+              <div class="fact-val">Moove, Unitas &amp; Duel Duck</div>
             </div>
             <div class="fact-card interactive reveal-item">
               <div class="fact-label">Style</div>
@@ -2341,26 +2588,6 @@
         <h2 class="section-heading reveal-item">Art Meets Web3.</h2>
 
         <div class="services-grid">
-          <!-- Card 1 -->
-          <div class="service-card interactive reveal-item">
-            <div>
-              <div class="service-icon-circle">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
-                  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
-                  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
-                  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
-                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"/>
-                </svg>
-              </div>
-              <h3 class="service-title">Digital Art</h3>
-              <p class="service-desc">
-                Creating original digital artwork for Web3 projects, NFT collections, profile art, and brand visuals. Art with personality and soul.
-              </p>
-            </div>
-            <span class="service-tag">Digital Art</span>
-          </div>
-
           <!-- Card 2 -->
           <div class="service-card interactive reveal-item">
             <div>
@@ -2404,7 +2631,7 @@
               </div>
               <h3 class="service-title">Ambassador Work</h3>
               <p class="service-desc">
-                Representing Unitas Labs and moove.xyz. Building awareness, creating content, onboarding users, and being a genuine voice for projects I believe in.
+                Representing Moove, Unitas Labs &amp; Duel Duck. Building awareness, creating content, onboarding users, and being a genuine voice for projects I believe in.
               </p>
             </div>
             <span class="service-tag">Ambassador</span>
@@ -2412,6 +2639,86 @@
         </div>
       </div>
     </section>
+
+    <!-- SECTION: THINGS I'VE BUILT -->
+    <section class="builds-section section-padded" id="builds">
+      <div class="section-wrapper">
+        <div class="section-label-box">
+          <span class="section-label">ON-CHAIN BUILDS</span>
+        </div>
+        <h2 class="section-heading reveal-item">Things I've Built.</h2>
+        <p class="builds-subtext reveal-item">Real dApps shipped solo on testnets and mainnets. From swap protocols to social mini-apps — I build and deploy fast.</p>
+
+        <div class="builds-grid">
+
+          <!-- ArcSwap -->
+          <a href="https://arc-swap-silk.vercel.app/" target="_blank" rel="noopener noreferrer" class="build-card interactive reveal-item">
+            <div class="build-card-top">
+              <div class="build-icon badge-arc">ARC</div>
+              <span class="build-live-badge">🟢 Live</span>
+            </div>
+            <h3 class="build-title">ArcSwap</h3>
+            <p class="build-desc">USDC ↔ EURC stablecoin swap protocol. Built solo on Arc Network's Seismic testnet using Next.js, wagmi, and Solidity.</p>
+            <div class="build-stack">
+              <span class="build-tag">Arc Network</span>
+              <span class="build-tag">Solidity</span>
+              <span class="build-tag">Next.js</span>
+            </div>
+            <div class="build-cta">Try ArcSwap ↗</div>
+          </a>
+
+          <!-- Arc Learner -->
+          <a href="https://arc-learner.vercel.app/" target="_blank" rel="noopener noreferrer" class="build-card interactive reveal-item">
+            <div class="build-card-top">
+              <div class="build-icon badge-arc">ARC</div>
+              <span class="build-live-badge">🟢 Live</span>
+            </div>
+            <h3 class="build-title">Arc Learner</h3>
+            <p class="build-desc">Interactive learning platform to onboard developers and users into the Arc Network ecosystem with bite-sized modules.</p>
+            <div class="build-stack">
+              <span class="build-tag">Arc Network</span>
+              <span class="build-tag">Next.js</span>
+              <span class="build-tag">Vercel</span>
+            </div>
+            <div class="build-cta">Try Arc Learner ↗</div>
+          </a>
+
+          <!-- Seisbird -->
+          <a href="https://seisbird.vercel.app/" target="_blank" rel="noopener noreferrer" class="build-card interactive reveal-item">
+            <div class="build-card-top">
+              <div class="build-icon badge-arc" style="font-size:11px;">SEI</div>
+              <span class="build-live-badge">🟢 Live</span>
+            </div>
+            <h3 class="build-title">Seisbird</h3>
+            <p class="build-desc">Onchain social mini-app inspired by X. Post and interact in a Twitter-style feed powered by Seismic EVM smart contracts.</p>
+            <div class="build-stack">
+              <span class="build-tag">Seismic EVM</span>
+              <span class="build-tag">Solidity</span>
+              <span class="build-tag">wagmi</span>
+            </div>
+            <div class="build-cta">Try Seisbird ↗</div>
+          </a>
+
+          <!-- Base Miner -->
+          <a href="https://base-season.vercel.app/" target="_blank" rel="noopener noreferrer" class="build-card interactive reveal-item">
+            <div class="build-card-top">
+              <div class="build-icon badge-base" style="font-size:10px; padding: 0 6px;">BASE</div>
+              <span class="build-live-badge">🟢 Live</span>
+            </div>
+            <h3 class="build-title">Base Miner</h3>
+            <p class="build-desc">Clicker-style onchain mining game on Base Network. Gamified onboarding that makes interacting with Base actually fun.</p>
+            <div class="build-stack">
+              <span class="build-tag">Base Network</span>
+              <span class="build-tag">Solidity</span>
+              <span class="build-tag">React</span>
+            </div>
+            <div class="build-cta">Try Base Miner ↗</div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
 
     <!-- SECTION 5: PROJECTS -->
     <section class="projects-section section-padded" id="projects">
@@ -2432,8 +2739,7 @@
             <li><button type="button" class="filter-pill-btn interactive" data-filter="circlexio_nfts">Circlexio <span class="filter-count">8</span></button></li>
             <li><button type="button" class="filter-pill-btn interactive" data-filter="prismax">PrismaX AI <span class="filter-count">4</span></button></li>
             <li><button type="button" class="filter-pill-btn interactive" data-filter="moove">moove.xyz <span class="filter-count">1</span></button></li>
-            <li><button type="button" class="filter-pill-btn interactive" data-filter="arcswap">ArcSwap <span class="filter-count">Live</span></button></li>
-            <li><button type="button" class="filter-pill-btn interactive" data-filter="unitas">Unitas Labs <span class="filter-count">Ambassador</span></button></li>
+
             <li><button type="button" class="filter-pill-btn interactive" data-filter="mexc">MEXC <span class="filter-count">2</span></button></li>
             <li><button type="button" class="filter-pill-btn interactive" data-filter="deployza">Deployza <span class="filter-count">1</span></button></li>
             <li><button type="button" class="filter-pill-btn interactive" data-filter="defi_innovations">DeFi <span class="filter-count">2</span></button></li>
@@ -3259,7 +3565,7 @@
       </div>
 
       <div class="tweet-content-body">
-        <p class="tweet-p">Building onchain AI agents just got significantly simpler</p><p class="tweet-p">The <a href="https://x.com/injective" target="_blank" rel="noopener noreferrer" class="tweet-mention">@injective</a> AI Agent SDK is now live</p><p class="tweet-p">And the setup is just one command that connects cursor directly to Injective is MCP server</p><p class="tweet-p">—</p><p class="tweet-p">Once connected, the agent can do three things from a single workflow:</p><p class="tweet-p">• Read Injective documentation to stay grounded in how the protocol works<br>• Query live on chain data to understand the current network state<br>• Execute on chain actions without switching between different tools</p><p class="tweet-p">Everything happens in one place</p><p class="tweet-p">—</p><p class="tweet-p">What stands out is the architecture behind it</p><p class="tweet-p">Most AI agent workflows require developers to manually connect multiple components</p><p class="tweet-p">One tool for documentation<br>Another for blockchain queries<br>Another for signing and submitting transactions</p><p class="tweet-p">Every extra connection adds comexity increases maintenance and creates another point of failure</p><p class="tweet-p">—</p><p class="tweet-p">The Injective AI Agent SDK removes that overhead</p><p class="tweet-p">One installation<br>One connection</p><p class="tweet-p">The agent is ready to build from the start</p><p class="tweet-p">—</p><p class="tweet-p">The bigger picture is even more interesting</p><p class="tweet-p">Injective is already part of the x402 Foundation alongside AWS google, visa and mastercard, helping build an open payment standard that allows AI agents to pay for services on a per request basis without subscriptions or API keys</p><p class="tweet-p">—</p><p class="tweet-p">The AI Agent SDK becomes the development layer on top of that infrastructure</p><p class="tweet-p">Instead of only giving AI agents a way to pay it gives developers the tools to build agents that can actually use those payment rails in real applications</p><p class="tweet-p">—</p><p class="tweet-p">Put the two together and the direction becomes clear</p><p class="tweet-p">machine speed payments<br>A streamlined developer experience.</p><p class="tweet-p">And a foundation for AI agents that can interact with on chain applications far more efficiently than before</p><p class="tweet-p">DYOR NFA</p><p class="tweet-p"><a href="https://x.com/Injective" target="_blank" rel="noopener noreferrer" class="tweet-mention">@Injective</a></p>
+        <p class="tweet-p">Building onchain AI agents just got significantly simpler</p><p class="tweet-p">The <a href="https://x.com/injective" target="_blank" rel="noopener noreferrer" class="tweet-mention">@injective</a> AI Agent SDK is now live</p><p class="tweet-p">And the setup is just one command that connects cursor directly to Injective is MCP server</p><p class="tweet-p">—</p><p class="tweet-p">Once connected, the agent can do three things from a single workflow:</p><p class="tweet-p">• Read Injective documentation to stay grounded in how the protocol works<br>• Query live on chain data to understand the current network state<br>• Execute on chain actions without switching between different tools</p><p class="tweet-p">Everything happens in one place</p><p class="tweet-p">—</p><p class="tweet-p">What stands out is the architecture behind it</p><p class="tweet-p">Most AI agent workflows require developers to manually connect multiple components</p><p class="tweet-p">One tool for documentation<br>Another for blockchain queries<br>Another for signing and submitting transactions</p><p class="tweet-p">Every extra connection adds complexity, increases maintenance and creates another point of failure</p><p class="tweet-p">—</p><p class="tweet-p">The Injective AI Agent SDK removes that overhead</p><p class="tweet-p">One installation<br>One connection</p><p class="tweet-p">The agent is ready to build from the start</p><p class="tweet-p">—</p><p class="tweet-p">The bigger picture is even more interesting</p><p class="tweet-p">Injective is already part of the x402 Foundation alongside AWS google, visa and mastercard, helping build an open payment standard that allows AI agents to pay for services on a per request basis without subscriptions or API keys</p><p class="tweet-p">—</p><p class="tweet-p">The AI Agent SDK becomes the development layer on top of that infrastructure</p><p class="tweet-p">Instead of only giving AI agents a way to pay it gives developers the tools to build agents that can actually use those payment rails in real applications</p><p class="tweet-p">—</p><p class="tweet-p">Put the two together and the direction becomes clear</p><p class="tweet-p">machine speed payments<br>A streamlined developer experience.</p><p class="tweet-p">And a foundation for AI agents that can interact with on chain applications far more efficiently than before</p><p class="tweet-p">DYOR NFA</p><p class="tweet-p"><a href="https://x.com/Injective" target="_blank" rel="noopener noreferrer" class="tweet-mention">@Injective</a></p>
       </div>
 
       
@@ -5006,55 +5312,6 @@
     </section>
     
 
-    <!-- SECTION: ArcSwap -->
-    <section class="clean-project-block" id="project-arcswap" data-project-key="arcswap">
-      <div class="clean-project-header">
-        <div class="clean-title-left">
-          <span class="clean-project-icon badge-arc">ARC</span>
-          <h2 class="clean-project-heading">ArcSwap</h2>
-          <span class="clean-project-count">Solo Builder</span>
-        </div>
-
-      </div>
-      
-        <div class="project-mini-box">
-          <p class="project-mini-text">Solo Builder on Arc Network • USDC ↔ EURC Stablecoin Swap Protocol</p>
-          <a href="https://arc-swap-silk.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-primary interactive" style="font-size: 12.5px; padding: 6px 16px; display: inline-block;">Try ArcSwap ↗</a>
-        </div>
-        
-      
-        <div class="posts-placeholder-box">
-          <div class="sparkle-icon">✦</div>
-          <div class="posts-placeholder-text">Dedicated posts coming soon</div>
-        </div>
-        
-    </section>
-    
-
-    <!-- SECTION: Unitas Labs -->
-    <section class="clean-project-block" id="project-unitas" data-project-key="unitas">
-      <div class="clean-project-header">
-        <div class="clean-title-left">
-          <span class="clean-project-icon badge-unitas">UL</span>
-          <h2 class="clean-project-heading">Unitas Labs</h2>
-          <span class="clean-project-count">Ambassador</span>
-        </div>
-
-      </div>
-      
-        <div class="project-mini-box">
-          <p class="project-mini-text">Official Ambassador • The Yield Generation Layer for the Internet of Value</p>
-        </div>
-        
-      
-        <div class="posts-placeholder-box">
-          <div class="sparkle-icon">✦</div>
-          <div class="posts-placeholder-text">Dedicated posts coming soon</div>
-        </div>
-        
-    </section>
-    
-
     <!-- SECTION: MEXC -->
     <section class="clean-project-block" id="project-mexc" data-project-key="mexc">
       <div class="clean-project-header">
@@ -5172,7 +5429,7 @@
       </div>
 
       <div class="tweet-content-body">
-        <p class="tweet-p">My MEXC 0808 Stock Cart is ready</p><p class="tweet-p">I went with a simple retail basket :</p><p class="tweet-p"><span class="tweet-token">$WMT</span> — 20 (Walnart)<br><span class="tweet-token">$KO</span> — 20%  (Coca-Cola)<br><span class="tweet-token">$NKE</span> — 20% (Nike)<br><span class="tweet-token">$MCD</span> — 20% (McDonald's)<br><span class="tweet-token">$SBUX</span> — 20% (Starbucks)</p><p class="tweet-p">I wanted a mix of everyday consumer brands that I already see around me in real life</p><p class="tweet-p">Now let's see how this basket holds up<br>What would you put in your 5 stock cart?</p><p class="tweet-p"><a href="https://x.com/MEXC" target="_blank" rel="noopener noreferrer" class="tweet-mention">@MEXC</a> <span class="tweet-hashtag">#MEXC0808</span></p>
+                <p class="tweet-p">My MEXC 0808 Stock Cart is ready</p><p class="tweet-p">I went with a simple retail basket :</p><p class="tweet-p"><span class="tweet-token">$WMT</span> — 20 (Walmart)<br><span class="tweet-token">$KO</span> — 20%  (Coca-Cola)<br><span class="tweet-token">$NKE</span> — 20% (Nike)<br><span class="tweet-token">$MCD</span> — 20% (McDonald's)<br><span class="tweet-token">$SBUX</span> — 20% (Starbucks)</p><p class="tweet-p">I wanted a mix of everyday consumer brands that I already see around me in real life</p><p class="tweet-p">Now let's see how this basket holds up<br>What would you put in your 5 stock cart?</p><p class="tweet-p"><a href="https://x.com/MEXC" target="_blank" rel="noopener noreferrer" class="tweet-mention">@MEXC</a> <span class="tweet-hashtag">#MEXC0808</span></p>
       </div>
 
       
@@ -5903,9 +6160,9 @@
                 </div>
                 <span class="achievement-tag">Ambassador</span>
               </div>
-              <h3 class="achievement-title">Unitas Labs & moove.xyz Ambassador</h3>
+              <h3 class="achievement-title">Moove, Unitas Labs &amp; Duel Duck Ambassador</h3>
               <p class="achievement-desc">
-                Selected as official ambassador representing Unitas Labs (Yield Generation Layer) and moove.xyz, driving ecosystem advocacy, content, and community awareness.
+                Selected as official ambassador representing Moove, Unitas Labs (Yield Generation Layer), and Duel Duck, driving ecosystem advocacy, content, and community awareness.
               </p>
             </div>
             <div class="achievement-footer">
@@ -5949,7 +6206,7 @@
         <h2 class="contact-heading section-heading reveal-item">Open to Collabs.</h2>
 
         <p class="contact-subtext reveal-item">
-          Available for digital art commissions, content creation, ambassador roles, Web3 building collabs, and community work.
+          Available for content creation, ambassador roles, Web3 building collaborations, and ecosystem growth.
         </p>
 
         <div class="collab-badge reveal-item">
@@ -6188,10 +6445,12 @@
 
       // 5. Typewriter Animation for Hero Section
       const roleCycles = [
-        'Digital Artist',
-        'Content Creator',
+        'Web3 Content Creator',
         'Web3 Builder',
-        'Arc Ambassador'
+        'Creator of ArcSwap',
+        'Moove Ambassador',
+        'Unitas Labs Ambassador',
+        'Duel Duck Ambassador'
       ];
       let roleIndex = 0;
       let charIndex = 0;
